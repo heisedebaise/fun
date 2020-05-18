@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git add image
+git add images
 git add *.py
 git add *.sh
 git commit -m dev
