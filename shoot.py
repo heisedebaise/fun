@@ -33,6 +33,10 @@ def update():
         else:
             direction = -1
     alien.left += direction*random.randint(0, 3)
+    if alien.left <= 0:
+        alien.left = 0
+    elif alien.right >= WIDTH:
+        alien.right = WIDTH
 
     alien.top += 1
     if alien.bottom > HEIGHT:
