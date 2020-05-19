@@ -1,10 +1,12 @@
 import random
 
-WIDTH = 800
-HEIGHT = 600
+WIDTH = 400
+HEIGHT = 800
 
 alien = Actor('alien')
-alien.pos = 400, 0
+alien.midtop = WIDTH/2, 0
+alienWidth = 66
+alienHeight = 92
 count = 1
 direction = 1
 
@@ -17,13 +19,14 @@ def draw():
 def update():
     global count, direction
     count += 1
-    if count % 100 == 0:
-        direction = random.randint(-1, 1)
+    if alien.left <= 0:
+        direction = 1
+    elif alien.right >= WIDTH:
+        direction = -1
+    elif count % 50 == 0:
+        direction = 1 if random.randint(0, 1) == 1 else -1
     alien.left += direction*random.randint(0, 3)
-    if alien.left < 0:
-        alien.left = WIDTH
-    elif alien.left > WIDTH:
-        alien.left = 0
+
     alien.top += 1
-    if alien.top > HEIGHT:
+    if alien.bottom > HEIGHT:
         alien.top = 0
