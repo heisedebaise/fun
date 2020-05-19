@@ -58,3 +58,12 @@ def update():
         fighter.top += 1
         if fighter.bottom >= HEIGHT:
             fighter.bottom = HEIGHT
+
+    if bullet.bottom > 0:
+        bullet.bottom -= 5
+    elif keyboard.j:
+        bullet.center = fighter.center
+
+    if bullet.left >= alien.left and bullet.right <= alien.right and bullet.top <= alien.bottom and bullet.top > alien.top:
+        alien.top = 0
+        bullet.bottom = 0 
