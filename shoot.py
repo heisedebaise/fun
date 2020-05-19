@@ -5,8 +5,8 @@ HEIGHT = 900
 
 alien = Actor('alien')
 alien.midtop = WIDTH/2, 0
-alienWidth = 66
-alienHeight = 92
+fighter = Actor('fighter')
+fighter.midbottom = WIDTH/2, HEIGHT
 count = 1
 direction = 1
 
@@ -14,6 +14,7 @@ direction = 1
 def draw():
     screen.clear()
     alien.draw()
+    fighter.draw()
 
 
 def update():
