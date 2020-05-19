@@ -25,7 +25,10 @@ def update():
     elif alien.right >= WIDTH:
         direction = -1
     elif count % 50 == 0:
-        direction = 1 if random.randint(0, 1) == 1 else -1
+        if random.randint(0, 1) == 1:
+            direction = 1
+        else:
+            direction = -1
     alien.left += direction*random.randint(0, 3)
 
     alien.top += 1
