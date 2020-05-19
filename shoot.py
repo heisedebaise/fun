@@ -31,5 +31,20 @@ def update():
     alien.top += 1
     if alien.bottom > HEIGHT:
         alien.top = 0
-    
-    print(keyboard.a)
+
+    if keyboard.a:
+        fighter.left -= 2
+        if fighter.left <= 0:
+            fighter.left = 0
+    elif keyboard.d:
+        fighter.left += 2
+        if fighter.right >= WIDTH:
+            fighter.right = WIDTH
+    elif keyboard.w:
+        fighter.top -= 1
+        if fighter.top <= 0:
+            fighter.top = 0
+    elif keyboard.s:
+        fighter.top += 1
+        if fighter.bottom >= HEIGHT:
+            fighter.bottom = HEIGHT
