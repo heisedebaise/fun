@@ -31,3 +31,5 @@ def update():
     alien.top += 1
     if alien.bottom > HEIGHT:
         alien.top = 0
+    
+    print(keyboard.a)
