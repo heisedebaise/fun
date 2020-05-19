@@ -1,7 +1,7 @@
 import random
 
-WIDTH = 256
-HEIGHT = 1024
+WIDTH = 300
+HEIGHT = 900
 
 alien = Actor('alien')
 alien.midtop = WIDTH/2, 0
