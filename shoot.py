@@ -7,6 +7,8 @@ alien = Actor('alien')
 alien.midtop = WIDTH/2, 0
 fighter = Actor('fighter')
 fighter.midbottom = WIDTH/2, HEIGHT
+bullet = Actor('bullet')
+bullet.midbottom = WIDTH/2, 0
 count = 1
 direction = 1
 
@@ -14,6 +16,7 @@ direction = 1
 def draw():
     screen.clear()
     alien.draw()
+    bullet.draw()
     fighter.draw()
 
 
